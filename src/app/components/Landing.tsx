@@ -1,3 +1,5 @@
+"use client";
+
 import { Button, Stack, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 

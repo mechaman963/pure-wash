@@ -1,3 +1,4 @@
+"use client";
 import { Stack, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 interface IPlans {
@@ -25,19 +26,32 @@ const Plans = () => {
       margin={"0 auto"}
       alignItems={"center"}
       justifyContent={"space-between"}
-      sx={{ translate: "0 50%", mt: mobile ? "-30vh" : "-20vh" }}
+      sx={{
+        translate: "0 50%",
+        mt: mobile ? "-30vh" : "-20vh",
+        direction: "rtl",
+      }}
       flexWrap={"wrap"}
       padding={4}
     >
       {plans.map((plan) => (
-        <Stack key={plan.id} alignItems={"center"} gap={4}>
+        <Stack
+          key={plan.id}
+          width={belowLg ? (mobile ? "100%" : "33%") : "30%"}
+          alignItems={"center"}
+          gap={4}
+        >
           <Image
             src={plan.img}
             width={belowLg ? 70 : 80}
             height={belowLg ? 70 : 80}
             alt=""
           />
-          <Typography variant={belowLg ? "h5" : "h4"} fontWeight={"500"}>
+          <Typography
+            textAlign={"center"}
+            variant={belowLg ? "h5" : "h4"}
+            fontWeight={"500"}
+          >
             {plan.title}
           </Typography>
         </Stack>

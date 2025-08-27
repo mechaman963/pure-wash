@@ -1,5 +1,7 @@
 "use client";
 import { Cairo } from "next/font/google";
+import { ThemeProvider, createTheme } from "@mui/material";
+import React, { JSX } from "react";
 
 const cairo = Cairo({
   subsets: ["latin", "arabic"],
@@ -8,10 +10,11 @@ const cairo = Cairo({
   variable: "--font-cairo",
 });
 
-import { ThemeProvider, createTheme } from "@mui/material";
-import React from "react";
-
-const ThemesProvider = ({ children }: { children: React.ReactNode }) => {
+const ThemesProvider = ({
+  children,
+}: {
+  children: React.ReactNode;
+}): JSX.Element => {
   const theme = createTheme({
     palette: {
       primary: {
@@ -27,4 +30,5 @@ const ThemesProvider = ({ children }: { children: React.ReactNode }) => {
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
+
 export default ThemesProvider;

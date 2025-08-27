@@ -1,10 +1,5 @@
-import {
-  Button,
-  CssBaseline,
-  Stack,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+"use client";
+import { CssBaseline, Stack, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 
 interface ISubs {
@@ -61,7 +56,7 @@ const Services = () => {
           <Stack
             key={service.id}
             direction={"column"}
-            alignItems={"end``"}
+            alignItems={"flex-end"}
             justifyContent={"space-between"}
             sx={{
               padding: "48px",
@@ -79,7 +74,7 @@ const Services = () => {
                 src={service.img}
                 width={80}
                 height={80}
-                objectFit="contain"
+                style={{ objectFit: "contain" }}
                 alt=""
               />
               <Typography variant="h5" sx={{ direction: "rtl" }}>
