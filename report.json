@@ -1,0 +1,1354 @@
+{
+  "metadata": {
+    "timestamp": "2025-08-27T03:11:51.246Z",
+    "version": "1.0.0",
+    "tool": "Next.js + MUI Audit Toolkit"
+  },
+  "summary": {
+    "overallScore": 90,
+    "letterGrade": "A",
+    "totalFiles": 16,
+    "totalIssues": 84,
+    "criticalIssues": 8,
+    "categoryScores": {
+      "nextjs": 83,
+      "mui": 100,
+      "accessibility": 80,
+      "responsive": 90,
+      "performance": 90,
+      "security": 90,
+      "quality": 70,
+      "pwa": 88
+    }
+  },
+  "issues": {
+    "byCategory": {
+      "pwa": {
+        "total": 7,
+        "bySeverity": {
+          "error": 4,
+          "warning": 3,
+          "info": 0
+        },
+        "fileCount": 2
+      },
+      "security": {
+        "total": 1,
+        "bySeverity": {
+          "error": 1,
+          "warning": 0,
+          "info": 0
+        },
+        "fileCount": 1
+      },
+      "nextjs": {
+        "total": 5,
+        "bySeverity": {
+          "error": 0,
+          "warning": 5,
+          "info": 0
+        },
+        "fileCount": 3
+      },
+      "performance": {
+        "total": 3,
+        "bySeverity": {
+          "error": 0,
+          "warning": 3,
+          "info": 0
+        },
+        "fileCount": 3
+      },
+      "image": {
+        "total": 5,
+        "bySeverity": {
+          "error": 0,
+          "warning": 5,
+          "info": 0
+        },
+        "fileCount": 5
+      },
+      "quality": {
+        "total": 42,
+        "bySeverity": {
+          "error": 0,
+          "warning": 41,
+          "info": 1
+        },
+        "fileCount": 14
+      },
+      "responsive": {
+        "total": 4,
+        "bySeverity": {
+          "error": 1,
+          "warning": 3,
+          "info": 0
+        },
+        "fileCount": 4
+      },
+      "seo": {
+        "total": 9,
+        "bySeverity": {
+          "error": 1,
+          "warning": 7,
+          "info": 1
+        },
+        "fileCount": 1
+      },
+      "accessibility": {
+        "total": 2,
+        "bySeverity": {
+          "error": 1,
+          "warning": 1,
+          "info": 0
+        },
+        "fileCount": 1
+      },
+      "structure": {
+        "total": 6,
+        "bySeverity": {
+          "error": 0,
+          "warning": 1,
+          "info": 5
+        },
+        "fileCount": 1
+      }
+    },
+    "bySeverity": {
+      "error": 8,
+      "warning": 69,
+      "info": 7
+    },
+    "topIssues": [
+      {
+        "count": 4,
+        "rule": "pwa/head-tags",
+        "category": "pwa",
+        "severity": "error",
+        "message": "Missing theme-color meta tag"
+      },
+      {
+        "count": 2,
+        "rule": "pwa/service-worker",
+        "category": "pwa",
+        "severity": "error",
+        "message": "next-pwa not configured in next.config.js"
+      },
+      {
+        "count": 1,
+        "rule": "security/headers-config",
+        "category": "security",
+        "severity": "error",
+        "message": "Security headers function not configured"
+      },
+      {
+        "count": 1,
+        "rule": "responsive/viewport-meta",
+        "category": "responsive",
+        "severity": "error",
+        "message": "Missing viewport meta tag"
+      },
+      {
+        "count": 1,
+        "rule": "seo/title-tag",
+        "category": "seo",
+        "severity": "error",
+        "message": "Missing page title tag"
+      },
+      {
+        "count": 1,
+        "rule": "pwa/manifest-exists",
+        "category": "pwa",
+        "severity": "error",
+        "message": "PWA manifest.json reference missing"
+      },
+      {
+        "count": 1,
+        "rule": "a11y/keyboard-interaction",
+        "category": "accessibility",
+        "severity": "error",
+        "message": "Interactive elements must be keyboard accessible"
+      },
+      {
+        "count": 26,
+        "rule": "typescript/explicit-returns",
+        "category": "quality",
+        "severity": "warning",
+        "message": "Function 'Home' should have explicit return type"
+      },
+      {
+        "count": 14,
+        "rule": "quality/function-complexity",
+        "category": "quality",
+        "severity": "warning",
+        "message": "Function is too complex (high cyclomatic complexity)"
+      },
+      {
+        "count": 6,
+        "rule": "structure/public-folder-organization",
+        "category": "structure",
+        "severity": "warning",
+        "message": "PWA manifest.json is missing"
+      },
+      {
+        "count": 5,
+        "rule": "next/client-directive",
+        "category": "nextjs",
+        "severity": "warning",
+        "message": "Unnecessary \"use client\" directive detected"
+      },
+      {
+        "count": 5,
+        "rule": "image/png-icons",
+        "category": "image",
+        "severity": "warning",
+        "message": "PNG icon should be converted to SVG"
+      },
+      {
+        "count": 4,
+        "rule": "seo/og-tags",
+        "category": "seo",
+        "severity": "warning",
+        "message": "Missing Open Graph tag: og:title"
+      },
+      {
+        "count": 3,
+        "rule": "perf/client-heavy",
+        "category": "performance",
+        "severity": "warning",
+        "message": "Too many client components may impact performance"
+      },
+      {
+        "count": 3,
+        "rule": "seo/meta-tags",
+        "category": "seo",
+        "severity": "warning",
+        "message": "Missing meta tag: description"
+      },
+      {
+        "count": 3,
+        "rule": "responsive/fixed-dimensions",
+        "category": "responsive",
+        "severity": "warning",
+        "message": "Fixed pixel dimensions may cause responsive issues"
+      },
+      {
+        "count": 1,
+        "rule": "modern/error-boundaries",
+        "category": "quality",
+        "severity": "warning",
+        "message": "Missing error boundary implementation"
+      },
+      {
+        "count": 1,
+        "rule": "a11y/keyboard-navigation",
+        "category": "accessibility",
+        "severity": "warning",
+        "message": "Interactive element missing keyboard support"
+      },
+      {
+        "count": 1,
+        "rule": "seo/structured-data",
+        "category": "seo",
+        "severity": "info",
+        "message": "Missing structured data markup"
+      },
+      {
+        "count": 1,
+        "rule": "quality/import-order",
+        "category": "quality",
+        "severity": "info",
+        "message": "Imports should be ordered: React -> External -> Internal"
+      }
+    ],
+    "eslint": {
+      "files": {},
+      "summary": {
+        "totalFiles": 0,
+        "totalIssues": 0,
+        "issuesBySeverity": {
+          "error": 0,
+          "warning": 0,
+          "info": 0
+        },
+        "issuesByRule": {}
+      }
+    }
+  },
+  "files": {
+    "next.config.ts": {
+      "path": "next.config.ts",
+      "issues": [
+        {
+          "rule": "pwa/service-worker",
+          "category": "pwa",
+          "severity": "error",
+          "message": "next-pwa not configured in next.config.js",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No PWA configuration found",
+          "suggestion": "Install and configure next-pwa with withPWA() wrapper",
+          "file": "next.config.ts"
+        },
+        {
+          "rule": "pwa/service-worker",
+          "category": "pwa",
+          "severity": "warning",
+          "message": "No runtime caching strategy configured",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No runtimeCaching found",
+          "suggestion": "Add runtimeCaching strategies for offline functionality",
+          "file": "next.config.ts"
+        },
+        {
+          "rule": "security/headers-config",
+          "category": "security",
+          "severity": "error",
+          "message": "Security headers function not configured",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No headers() function found",
+          "suggestion": "Add async headers() function with security headers",
+          "file": "next.config.ts"
+        }
+      ],
+      "score": 62
+    },
+    "next-env.d.ts": {
+      "path": "next-env.d.ts",
+      "issues": [],
+      "score": 100
+    },
+    "src\\app\\page.tsx": {
+      "path": "src\\app\\page.tsx",
+      "issues": [
+        {
+          "rule": "next/client-directive",
+          "category": "nextjs",
+          "severity": "warning",
+          "message": "Unnecessary \"use client\" directive detected",
+          "line": 1,
+          "column": 1,
+          "excerpt": "\"use client\";",
+          "suggestion": "Remove \"use client\" if component doesn't need client-side features",
+          "file": "src\\app\\page.tsx",
+          "exactLocation": "src\\app\\page.tsx:1:1"
+        },
+        {
+          "rule": "next/client-directive",
+          "category": "nextjs",
+          "severity": "warning",
+          "message": "Unnecessary \"use client\" directive",
+          "line": 1,
+          "column": 1,
+          "excerpt": "\"use client\";",
+          "suggestion": "Remove \"use client\" directive as component doesn't use client-side features",
+          "file": "src\\app\\page.tsx"
+        },
+        {
+          "rule": "perf/client-heavy",
+          "category": "performance",
+          "severity": "warning",
+          "message": "Too many client components may impact performance",
+          "line": 1,
+          "column": 1,
+          "excerpt": "\"use client\";",
+          "suggestion": "",
+          "file": "src\\app\\page.tsx",
+          "exactLocation": "src\\app\\page.tsx:1:1"
+        },
+        {
+          "rule": "image/png-icons",
+          "category": "image",
+          "severity": "warning",
+          "message": "PNG icon should be converted to SVG",
+          "line": 22,
+          "column": 11,
+          "excerpt": "<Image src={\"/vector.png\"} fill alt=\"\" />",
+          "suggestion": "Convert /vector.png to SVG format for better scalability and smaller file size",
+          "file": "src\\app\\page.tsx"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 14,
+          "column": 16,
+          "excerpt": "export default function Home() {",
+          "suggestion": "",
+          "file": "src\\app\\page.tsx",
+          "exactLocation": "src\\app\\page.tsx:14:16"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Home' should have explicit return type",
+          "line": 14,
+          "column": 1,
+          "excerpt": "function Home() ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\page.tsx"
+        }
+      ],
+      "score": 52
+    },
+    "src\\app\\layout.tsx": {
+      "path": "src\\app\\layout.tsx",
+      "issues": [
+        {
+          "rule": "responsive/viewport-meta",
+          "category": "responsive",
+          "severity": "error",
+          "message": "Missing viewport meta tag",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No viewport meta tag found",
+          "suggestion": "Add <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/meta-tags",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing meta tag: description",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No meta name=\"description\" found",
+          "suggestion": "Add <meta name=\"description\" content=\"Your description here\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/meta-tags",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing meta tag: keywords",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No meta name=\"keywords\" found",
+          "suggestion": "Add <meta name=\"keywords\" content=\"Your keywords here\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/meta-tags",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing meta tag: author",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No meta name=\"author\" found",
+          "suggestion": "Add <meta name=\"author\" content=\"Your author here\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/og-tags",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing Open Graph tag: og:title",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No og:title found",
+          "suggestion": "Add <meta property=\"og:title\" content=\"Your title here\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/og-tags",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing Open Graph tag: og:description",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No og:description found",
+          "suggestion": "Add <meta property=\"og:description\" content=\"Your description here\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/og-tags",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing Open Graph tag: og:image",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No og:image found",
+          "suggestion": "Add <meta property=\"og:image\" content=\"Your image here\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/og-tags",
+          "category": "seo",
+          "severity": "warning",
+          "message": "Missing Open Graph tag: og:type",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No og:type found",
+          "suggestion": "Add <meta property=\"og:type\" content=\"Your type here\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/title-tag",
+          "category": "seo",
+          "severity": "error",
+          "message": "Missing page title tag",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No <title> tag found",
+          "suggestion": "Add <title>Your Page Title</title>",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 18,
+          "column": 16,
+          "excerpt": "export default function RootLayout({",
+          "suggestion": "",
+          "file": "src\\app\\layout.tsx",
+          "exactLocation": "src\\app\\layout.tsx:18:16"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'RootLayout' should have explicit return type",
+          "line": 18,
+          "column": 1,
+          "excerpt": "function RootLayout({\r\n  children,\r\n}: Readonly<{\r\n  children: React.ReactNode;\r\n}>) ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "modern/error-boundaries",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Missing error boundary implementation",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No error boundary found",
+          "suggestion": "Implement error boundaries to gracefully handle component errors",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "seo/structured-data",
+          "category": "seo",
+          "severity": "info",
+          "message": "Missing structured data markup",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No structured data found",
+          "suggestion": "Add JSON-LD structured data for better SEO and rich snippets",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "pwa/manifest-exists",
+          "category": "pwa",
+          "severity": "error",
+          "message": "PWA manifest.json reference missing",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No manifest.json reference found",
+          "suggestion": "Add <link rel=\"manifest\" href=\"/manifest.json\"> to enable PWA functionality",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "pwa/head-tags",
+          "category": "pwa",
+          "severity": "error",
+          "message": "Missing theme-color meta tag",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No theme-color meta tag found",
+          "suggestion": "Add <meta name=\"theme-color\" content=\"#your-color\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "pwa/head-tags",
+          "category": "pwa",
+          "severity": "error",
+          "message": "Missing manifest link tag",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No manifest link found",
+          "suggestion": "Add <link rel=\"manifest\" href=\"/manifest.json\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "pwa/head-tags",
+          "category": "pwa",
+          "severity": "warning",
+          "message": "Missing apple-touch-icon link",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No apple-touch-icon found",
+          "suggestion": "Add <link rel=\"apple-touch-icon\" href=\"/icon-180x180.png\">",
+          "file": "src\\app\\layout.tsx"
+        },
+        {
+          "rule": "pwa/head-tags",
+          "category": "pwa",
+          "severity": "warning",
+          "message": "Missing color-scheme meta tag",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No color-scheme meta tag found",
+          "suggestion": "Add <meta name=\"color-scheme\" content=\"light dark\">",
+          "file": "src\\app\\layout.tsx"
+        }
+      ],
+      "score": 0
+    },
+    "src\\app\\theme\\ThemeProvider.tsx": {
+      "path": "src\\app\\theme\\ThemeProvider.tsx",
+      "issues": [
+        {
+          "rule": "next/client-directive",
+          "category": "nextjs",
+          "severity": "warning",
+          "message": "Unnecessary \"use client\" directive detected",
+          "line": 1,
+          "column": 1,
+          "excerpt": "\"use client\";",
+          "suggestion": "Remove \"use client\" if component doesn't need client-side features",
+          "file": "src\\app\\theme\\ThemeProvider.tsx",
+          "exactLocation": "src\\app\\theme\\ThemeProvider.tsx:1:1"
+        },
+        {
+          "rule": "next/client-directive",
+          "category": "nextjs",
+          "severity": "warning",
+          "message": "Unnecessary \"use client\" directive",
+          "line": 1,
+          "column": 1,
+          "excerpt": "\"use client\";",
+          "suggestion": "Remove \"use client\" directive as component doesn't use client-side features",
+          "file": "src\\app\\theme\\ThemeProvider.tsx"
+        },
+        {
+          "rule": "perf/client-heavy",
+          "category": "performance",
+          "severity": "warning",
+          "message": "Too many client components may impact performance",
+          "line": 1,
+          "column": 1,
+          "excerpt": "\"use client\";",
+          "suggestion": "",
+          "file": "src\\app\\theme\\ThemeProvider.tsx",
+          "exactLocation": "src\\app\\theme\\ThemeProvider.tsx:1:1"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 14,
+          "column": 1,
+          "excerpt": "const ThemesProvider = ({ children }: { children: React.ReactNode }) => {",
+          "suggestion": "",
+          "file": "src\\app\\theme\\ThemeProvider.tsx",
+          "exactLocation": "src\\app\\theme\\ThemeProvider.tsx:14:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 14,
+          "column": 1,
+          "excerpt": "const ThemesProvider = ({ children }: { children: React.ReactNode }) => {",
+          "suggestion": "",
+          "file": "src\\app\\theme\\ThemeProvider.tsx",
+          "exactLocation": "src\\app\\theme\\ThemeProvider.tsx:14:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'ThemesProvider' should have explicit return type",
+          "line": 14,
+          "column": 1,
+          "excerpt": "const ThemesProvider = ({ children }: { children: React.ReactNode }) => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\theme\\ThemeProvider.tsx"
+        }
+      ],
+      "score": 52
+    },
+    "src\\app\\components\\WhyPureWash.tsx": {
+      "path": "src\\app\\components\\WhyPureWash.tsx",
+      "issues": [
+        {
+          "rule": "responsive/fixed-dimensions",
+          "category": "responsive",
+          "severity": "warning",
+          "message": "Fixed pixel dimensions may cause responsive issues",
+          "line": 68,
+          "column": 15,
+          "excerpt": "width: \"400px\",",
+          "suggestion": "Use relative units (%, rem, vw) or responsive breakpoints",
+          "file": "src\\app\\components\\WhyPureWash.tsx",
+          "exactLocation": "src\\app\\components\\WhyPureWash.tsx:68:15"
+        },
+        {
+          "rule": "image/png-icons",
+          "category": "image",
+          "severity": "warning",
+          "message": "PNG icon should be converted to SVG",
+          "line": 53,
+          "column": 13,
+          "excerpt": "<Image src={\"/logo.png\"} width={180} height={50} alt=\"\" />",
+          "suggestion": "Convert /logo.png to SVG format for better scalability and smaller file size",
+          "file": "src\\app\\components\\WhyPureWash.tsx"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 38,
+          "column": 1,
+          "excerpt": "const Services = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\WhyPureWash.tsx",
+          "exactLocation": "src\\app\\components\\WhyPureWash.tsx:38:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 38,
+          "column": 1,
+          "excerpt": "const Services = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\WhyPureWash.tsx",
+          "exactLocation": "src\\app\\components\\WhyPureWash.tsx:38:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Services' should have explicit return type",
+          "line": 38,
+          "column": 1,
+          "excerpt": "const Services = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\WhyPureWash.tsx"
+        }
+      ],
+      "score": 60
+    },
+    "src\\app\\components\\Subscriptions.tsx": {
+      "path": "src\\app\\components\\Subscriptions.tsx",
+      "issues": [
+        {
+          "rule": "responsive/fixed-dimensions",
+          "category": "responsive",
+          "severity": "warning",
+          "message": "Fixed pixel dimensions may cause responsive issues",
+          "line": 63,
+          "column": 15,
+          "excerpt": "width: \"300px\",",
+          "suggestion": "Use relative units (%, rem, vw) or responsive breakpoints",
+          "file": "src\\app\\components\\Subscriptions.tsx",
+          "exactLocation": "src\\app\\components\\Subscriptions.tsx:63:15"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 38,
+          "column": 1,
+          "excerpt": "const Services = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Subscriptions.tsx",
+          "exactLocation": "src\\app\\components\\Subscriptions.tsx:38:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 38,
+          "column": 1,
+          "excerpt": "const Services = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Subscriptions.tsx",
+          "exactLocation": "src\\app\\components\\Subscriptions.tsx:38:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Services' should have explicit return type",
+          "line": 38,
+          "column": 1,
+          "excerpt": "const Services = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Subscriptions.tsx"
+        }
+      ],
+      "score": 68
+    },
+    "src\\app\\components\\Services.tsx": {
+      "path": "src\\app\\components\\Services.tsx",
+      "issues": [
+        {
+          "rule": "responsive/fixed-dimensions",
+          "category": "responsive",
+          "severity": "warning",
+          "message": "Fixed pixel dimensions may cause responsive issues",
+          "line": 67,
+          "column": 15,
+          "excerpt": "width: \"300px\",",
+          "suggestion": "Use relative units (%, rem, vw) or responsive breakpoints",
+          "file": "src\\app\\components\\Services.tsx",
+          "exactLocation": "src\\app\\components\\Services.tsx:67:15"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 42,
+          "column": 1,
+          "excerpt": "const Services = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Services.tsx",
+          "exactLocation": "src\\app\\components\\Services.tsx:42:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 42,
+          "column": 1,
+          "excerpt": "const Services = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Services.tsx",
+          "exactLocation": "src\\app\\components\\Services.tsx:42:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Services' should have explicit return type",
+          "line": 42,
+          "column": 1,
+          "excerpt": "const Services = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Services.tsx"
+        }
+      ],
+      "score": 68
+    },
+    "src\\app\\components\\Plans.tsx": {
+      "path": "src\\app\\components\\Plans.tsx",
+      "issues": [
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 14,
+          "column": 1,
+          "excerpt": "const Plans = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Plans.tsx",
+          "exactLocation": "src\\app\\components\\Plans.tsx:14:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 14,
+          "column": 1,
+          "excerpt": "const Plans = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Plans.tsx",
+          "exactLocation": "src\\app\\components\\Plans.tsx:14:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Plans' should have explicit return type",
+          "line": 14,
+          "column": 1,
+          "excerpt": "const Plans = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Plans.tsx"
+        }
+      ],
+      "score": 76
+    },
+    "src\\app\\components\\Offer.tsx": {
+      "path": "src\\app\\components\\Offer.tsx",
+      "issues": [
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Offer = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Offer.tsx",
+          "exactLocation": "src\\app\\components\\Offer.tsx:4:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Offer = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Offer.tsx",
+          "exactLocation": "src\\app\\components\\Offer.tsx:4:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Offer' should have explicit return type",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Offer = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Offer.tsx"
+        }
+      ],
+      "score": 76
+    },
+    "src\\app\\components\\Navbar.tsx": {
+      "path": "src\\app\\components\\Navbar.tsx",
+      "issues": [
+        {
+          "rule": "next/client-directive",
+          "category": "nextjs",
+          "severity": "warning",
+          "message": "Unnecessary \"use client\" directive detected",
+          "line": 1,
+          "column": 1,
+          "excerpt": "\"use client\";",
+          "suggestion": "Remove \"use client\" if component doesn't need client-side features",
+          "file": "src\\app\\components\\Navbar.tsx",
+          "exactLocation": "src\\app\\components\\Navbar.tsx:1:1"
+        },
+        {
+          "rule": "perf/client-heavy",
+          "category": "performance",
+          "severity": "warning",
+          "message": "Too many client components may impact performance",
+          "line": 1,
+          "column": 1,
+          "excerpt": "\"use client\";",
+          "suggestion": "",
+          "file": "src\\app\\components\\Navbar.tsx",
+          "exactLocation": "src\\app\\components\\Navbar.tsx:1:1"
+        },
+        {
+          "rule": "image/png-icons",
+          "category": "image",
+          "severity": "warning",
+          "message": "PNG icon should be converted to SVG",
+          "line": 27,
+          "column": 7,
+          "excerpt": "<Image src={\"/logo.png\"} height={43.35} width={150} alt=\"logo\" />",
+          "suggestion": "Convert /logo.png to SVG format for better scalability and smaller file size",
+          "file": "src\\app\\components\\Navbar.tsx"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 10,
+          "column": 1,
+          "excerpt": "const Navbar = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Navbar.tsx",
+          "exactLocation": "src\\app\\components\\Navbar.tsx:10:1"
+        },
+        {
+          "rule": "a11y/keyboard-navigation",
+          "category": "accessibility",
+          "severity": "warning",
+          "message": "Interactive element missing keyboard support",
+          "line": 34,
+          "column": 9,
+          "excerpt": "onClick={() => setOpen((prev) => !prev)}",
+          "suggestion": "Add keyboard event handlers and tabIndex for accessibility",
+          "file": "src\\app\\components\\Navbar.tsx",
+          "exactLocation": "src\\app\\components\\Navbar.tsx:34:9"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 10,
+          "column": 1,
+          "excerpt": "const Navbar = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Navbar.tsx",
+          "exactLocation": "src\\app\\components\\Navbar.tsx:10:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Navbar' should have explicit return type",
+          "line": 10,
+          "column": 1,
+          "excerpt": "const Navbar = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Navbar.tsx"
+        },
+        {
+          "rule": "quality/import-order",
+          "category": "quality",
+          "severity": "info",
+          "message": "Imports should be ordered: React -> External -> Internal",
+          "line": 1,
+          "column": 1,
+          "excerpt": "Import order not following best practices",
+          "suggestion": "Organize imports: React imports first, then external packages, then internal modules",
+          "file": "src\\app\\components\\Navbar.tsx"
+        },
+        {
+          "rule": "a11y/keyboard-interaction",
+          "category": "accessibility",
+          "severity": "error",
+          "message": "Interactive elements must be keyboard accessible",
+          "line": 34,
+          "column": 9,
+          "excerpt": "onClick={() => setOpen((prev) => !prev)}",
+          "suggestion": "Add keyboard event handlers or make element keyboard accessible",
+          "file": "src\\app\\components\\Navbar.tsx",
+          "exactLocation": "src\\app\\components\\Navbar.tsx:34:9"
+        }
+      ],
+      "score": 26
+    },
+    "src\\app\\components\\LinksMenu.tsx": {
+      "path": "src\\app\\components\\LinksMenu.tsx",
+      "issues": [
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const LinksMenu = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\LinksMenu.tsx",
+          "exactLocation": "src\\app\\components\\LinksMenu.tsx:4:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const LinksMenu = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\LinksMenu.tsx",
+          "exactLocation": "src\\app\\components\\LinksMenu.tsx:4:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'LinksMenu' should have explicit return type",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const LinksMenu = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\LinksMenu.tsx"
+        }
+      ],
+      "score": 76
+    },
+    "src\\app\\components\\Links.tsx": {
+      "path": "src\\app\\components\\Links.tsx",
+      "issues": [
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 17,
+          "column": 1,
+          "excerpt": "const Links = ({ parent }: { parent: string }) => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Links.tsx",
+          "exactLocation": "src\\app\\components\\Links.tsx:17:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 17,
+          "column": 1,
+          "excerpt": "const Links = ({ parent }: { parent: string }) => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Links.tsx",
+          "exactLocation": "src\\app\\components\\Links.tsx:17:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Links' should have explicit return type",
+          "line": 17,
+          "column": 1,
+          "excerpt": "const Links = ({ parent }: { parent: string }) => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Links.tsx"
+        }
+      ],
+      "score": 76
+    },
+    "src\\app\\components\\Landing.tsx": {
+      "path": "src\\app\\components\\Landing.tsx",
+      "issues": [
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Landing = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Landing.tsx",
+          "exactLocation": "src\\app\\components\\Landing.tsx:4:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Landing = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Landing.tsx",
+          "exactLocation": "src\\app\\components\\Landing.tsx:4:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Landing' should have explicit return type",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Landing = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Landing.tsx"
+        }
+      ],
+      "score": 76
+    },
+    "src\\app\\components\\Heading.tsx": {
+      "path": "src\\app\\components\\Heading.tsx",
+      "issues": [
+        {
+          "rule": "image/png-icons",
+          "category": "image",
+          "severity": "warning",
+          "message": "PNG icon should be converted to SVG",
+          "line": 22,
+          "column": 7,
+          "excerpt": "<Image src={\"/arrow.png\"} alt=\"\" width={45} height={45} />",
+          "suggestion": "Convert /arrow.png to SVG format for better scalability and smaller file size",
+          "file": "src\\app\\components\\Heading.tsx"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 9,
+          "column": 1,
+          "excerpt": "const Heading = ({ title }: { title: string }) => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Heading.tsx",
+          "exactLocation": "src\\app\\components\\Heading.tsx:9:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 9,
+          "column": 1,
+          "excerpt": "const Heading = ({ title }: { title: string }) => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Heading.tsx",
+          "exactLocation": "src\\app\\components\\Heading.tsx:9:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Heading' should have explicit return type",
+          "line": 9,
+          "column": 1,
+          "excerpt": "const Heading = ({ title }: { title: string }) => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Heading.tsx"
+        }
+      ],
+      "score": 68
+    },
+    "src\\app\\components\\Footer.tsx": {
+      "path": "src\\app\\components\\Footer.tsx",
+      "issues": [
+        {
+          "rule": "image/png-icons",
+          "category": "image",
+          "severity": "warning",
+          "message": "PNG icon should be converted to SVG",
+          "line": 27,
+          "column": 21,
+          "excerpt": "<Image src={\"/dial.png\"} width={50} height={50} alt=\"\" />",
+          "suggestion": "Convert /dial.png to SVG format for better scalability and smaller file size",
+          "file": "src\\app\\components\\Footer.tsx"
+        },
+        {
+          "rule": "quality/function-complexity",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function is too complex (high cyclomatic complexity)",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Footer = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Footer.tsx",
+          "exactLocation": "src\\app\\components\\Footer.tsx:4:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function should have explicit return type annotation",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Footer = () => {",
+          "suggestion": "",
+          "file": "src\\app\\components\\Footer.tsx",
+          "exactLocation": "src\\app\\components\\Footer.tsx:4:1"
+        },
+        {
+          "rule": "typescript/explicit-returns",
+          "category": "quality",
+          "severity": "warning",
+          "message": "Function 'Footer' should have explicit return type",
+          "line": 4,
+          "column": 1,
+          "excerpt": "const Footer = () => ",
+          "suggestion": "Add return type annotation: function funcName(): ReturnType",
+          "file": "src\\app\\components\\Footer.tsx"
+        }
+      ],
+      "score": 68
+    },
+    "public/": {
+      "path": "public/",
+      "issues": [
+        {
+          "rule": "structure/public-folder-organization",
+          "category": "structure",
+          "severity": "warning",
+          "message": "PWA manifest.json is missing",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No manifest.json found in public folder",
+          "suggestion": "Create manifest.json for PWA functionality",
+          "file": "public/manifest.json",
+          "exactLocation": "public/manifest.json:1:1"
+        },
+        {
+          "rule": "structure/public-folder-organization",
+          "category": "structure",
+          "severity": "info",
+          "message": "Sitemap is missing",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No sitemap found in public folder",
+          "suggestion": "Create sitemap.xml for better SEO",
+          "file": "public/sitemap.xml",
+          "exactLocation": "public/sitemap.xml:1:1"
+        },
+        {
+          "rule": "structure/public-folder-organization",
+          "category": "structure",
+          "severity": "info",
+          "message": "Consider organizing images into dedicated folders",
+          "line": 1,
+          "column": 1,
+          "excerpt": "Images are not organized in dedicated folders",
+          "suggestion": "Create icons/, images/, or assets/ folders for better organization",
+          "file": "public/",
+          "exactLocation": "public/:1:1"
+        },
+        {
+          "rule": "structure/public-folder-organization",
+          "category": "structure",
+          "severity": "info",
+          "message": "Consider adding 192x192 PWA icon",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No 192x192 icon found",
+          "suggestion": "Add 192x192 icon for better PWA compatibility",
+          "file": "public/",
+          "exactLocation": "public/:1:1"
+        },
+        {
+          "rule": "structure/public-folder-organization",
+          "category": "structure",
+          "severity": "info",
+          "message": "Consider adding 512x512 PWA icon",
+          "line": 1,
+          "column": 1,
+          "excerpt": "No 512x512 icon found",
+          "suggestion": "Add 512x512 icon for better PWA compatibility",
+          "file": "public/",
+          "exactLocation": "public/:1:1"
+        },
+        {
+          "rule": "structure/public-folder-organization",
+          "category": "structure",
+          "severity": "info",
+          "message": "Large images should be organized in dedicated folders",
+          "line": 1,
+          "column": 1,
+          "excerpt": "Large images found: car.png, car1.png, car2.png",
+          "suggestion": "Move large images to images/ or assets/ folder for better organization",
+          "file": "public/",
+          "exactLocation": "public/:1:1"
+        }
+      ],
+      "score": 77
+    }
+  },
+  "manualChecks": {
+    "responsive": [],
+    "accessibility": [],
+    "performance": [],
+    "notes": []
+  }
+}
